@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Sitio Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Menu-->
+    <nav class="bg-gray-100 shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-blue-600 bg-blue-100 px-3 py-1 rounded hover:bg-blue-200 transition-colors">
+                        Mi Sitio
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-blue-600 font-semibold border-b-2 border-blue-600 pb-1">Inicio</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Características</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Precios</a>
+                    <span class="text-gray-400 cursor-not-allowed">Deshabilitado</span>
+                </div>
+                
+                <button class="md:hidden text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+ <!-- Carrusel de imagenes principales -->
+    <div class="relative overflow-hidden">
+        <div id="miCarrusel" class="flex transition-transform duration-500 ease-in-out">
+            <div class="w-full flex-shrink-0 relative">
+                <img src="img/1.jpg" class="w-full h-96 object-cover" alt="Slide 1">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent flex items-center">
+                    <div class="text-white px-8 max-w-lg">
+                        <h1 class="text-4xl font-bold mb-4">Bienvenido a Mi Sitio</h1>
+                        <p class="text-xl mb-6">Descubre nuestros servicios excepcionales y soluciones innovadoras</p>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                            Comenzar Ahora
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full flex-shrink-0 relative">
+                <img src="img/2.jpg" class="w-full h-96 object-cover" alt="Slide 2">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent flex items-center">
+                    <div class="text-white px-8 max-w-lg">
+                        <h1 class="text-4xl font-bold mb-4">Innovación Constante</h1>
+                        <p class="text-xl mb-6">Tecnología de vanguardia para impulsar tu negocio</p>
+                        <button class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                            Explorar Más
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full flex-shrink-0 relative">
+                <img src="img/3.jpg" class="w-full h-96 object-cover" alt="Slide 3">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent flex items-center">
+                    <div class="text-white px-8 max-w-lg">
+                        <h1 class="text-4xl font-bold mb-4">Excelencia Garantizada</h1>
+                        <p class="text-xl mb-6">Calidad superior en cada proyecto que desarrollamos</p>
+                        <button class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                            Contactar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Boton anterior -->
+        <button onclick="imagenAnterior()" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-3 rounded-full backdrop-blur-sm transition-all">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+        </button>
+<!-- Boton siguiente -->
+        <button onclick="imagenSiguiente()" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-3 rounded-full backdrop-blur-sm transition-all">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+        </button>
+    </div>
+ <!-- Logos-->
+    <div class="bg-gray-100 py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+                <div class="flex justify-center">
+                    <img src="img/10.jpg" alt="Partner 1" class="h-14 w-28 object-contain hover:grayscale-0 transition-all duration-300 hover:scale-110">
+                </div>
+                <div class="flex justify-center">
+                    <img src="img/11.jpg" alt="Partner 2" class="h-14 w-28 object-contain  hover:grayscale-0 transition-all duration-300 hover:scale-110">
+                </div>
+                <div class="flex justify-center">
+                    <img src="img/12.jpg" alt="Partner 3" class="h-14 w-28object-contain  hover:grayscale-0 transition-all duration-300 hover:scale-110">
+                </div>
+                <div class="flex justify-center">
+                    <img src="img/13.jpg" alt="Partner 4" class="h-14 w-28 object-contain  hover:grayscale-0 transition-all duration-300 hover:scale-110">
+                </div>
+                <div class="flex justify-center">
+                    <img src="img/14.jpg" alt="Partner 5" class="h-14 w-28 object-contain hover:grayscale-0 transition-all duration-300 hover:scale-110">
+                </div>
+                <div class="flex justify-center">
+                    <img src="img/15.jpg" alt="Partner 6" class="h-14 w-28 object-contain  hover:grayscale-0 transition-all duration-300 hover:scale-110">
+                </div>
+            </div>
+        </div>
+    </div>
+ <!-- Seccion acerca de nosotros -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">ACERCA DE</h2>
+                
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero illum asperiores iusto nesciunt aperiam assumenda delectus et quos maiores cumque! Ullam tenetur assumenda placeat sed quo similique. Asperiores, labore dicta.
+                    </p>
+                  
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-3 h-3 bg-blue-600 rounded-full mr-3"></div>
+                            <span class="text-gray-700">Más de 10 años de experiencia</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-3 h-3 bg-green-600 rounded-full mr-3"></div>
+                            <span class="text-gray-700">Soluciones personalizadas</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-3 h-3 bg-purple-600 rounded-full mr-3"></div>
+                            <span class="text-gray-700">Soporte 24/7</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa excepturi tempore similique error odit iure maiores totam facilis deserunt. Quibusdam ducimus omnis saepe quod rem similique blanditiis ad error delectus.
+                    </p>
+                  
+                    <button class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        Conocer Más
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Tarjetas -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="p-8 text-center">
+                        <div class="mb-6">
+                            <img src="img/6.jpg" alt="Servicio 1" class="w-20 h-20 rounded-full mx-auto object-cover group-hover:scale-110 transition-transform duration-300">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Servicio Premium</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                        </p>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
+                            Más Información
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="p-8 text-center">
+                        <div class="mb-6">
+                            <img src="img/3.jpg" alt="Servicio 2" class="w-20 h-20 rounded-full mx-auto object-cover group-hover:scale-110 transition-transform duration-300">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Solución Integral</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                        </p>
+                        <button class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
+                            Explorar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="p-8 text-center">
+                        <div class="mb-6">
+                            <img src="img/1.jpg" alt="Servicio 3" class="w-20 h-20 rounded-full mx-auto object-cover group-hover:scale-110 transition-transform duration-300">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Consultoría Experta</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                        </p>
+                        <button class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
+                            Contactar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Pie de pagina -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-blue-400">Inicio</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Descubre nuestros servicios y soluciones innovadoras que transformarán tu negocio.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-blue-400">Acerca de</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Conoce más sobre nuestra misión, visión y el equipo experto que hace posible todo esto.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-blue-400">Redes Sociales</h3>
+ <!-- Iconos de redes sociales -->
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transform hover:scale-110 transition-all duration-300">
+                            <i class="bi bi-facebook text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center hover:bg-blue-600 transform hover:scale-110 transition-all duration-300">
+                            <i class="bi bi-messenger text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center hover:bg-green-600 transform hover:scale-110 transition-all duration-300">
+                            <i class="bi bi-whatsapp text-white"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript para el carrusel -->
+    <script>
+       
+        var imagenActual = 0;
+        var totalImagenes = 3; // tenemos 3 slides
+        function imagenSiguiente() {
+            imagenActual = imagenActual + 1;
+            if (imagenActual >= totalImagenes) {
+                imagenActual = 0; // volver al inicio
+            }
+            actualizarCarrusel();
+        } 
+        function imagenAnterior() {
+            imagenActual = imagenActual - 1;
+            if (imagenActual < 0) {
+                imagenActual = totalImagenes - 1; // ir al final
+            }
+            actualizarCarrusel();
+        }
+        function actualizarCarrusel() {
+            var carrusel = document.getElementById('miCarrusel');
+            var posicion = imagenActual * 100; // cada imagen ocupa 100%
+            carrusel.style.transform = 'translateX(-' + posicion + '%)';
+        }
+        setInterval(imagenSiguiente, 5000);
+    </script>
+</body>
+</html>
